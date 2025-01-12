@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 export function TestimonialCard() {
   return (

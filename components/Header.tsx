@@ -2,21 +2,25 @@
 
 import Image from 'next/image';
 import { MobileNav } from './MobileNav';
+import Link from 'next/link';
 
 export function Header() {
   return (
     <nav className='sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-purple-600/20'>
       <div className='container mx-auto px-4 py-4 flex items-center justify-between'>
-        <div className='flex items-center gap-2'>
-          <Image
-            src='/logo.png'
-            alt='FSADP Logo'
-            width={40}
-            height={40}
-            className='w-10 h-10'
-          />
-          <span className='text-white font-bold text-xl'>FSADP</span>
-        </div>
+        <Link href='/'>
+          <div className='flex items-center gap-2'>
+            <Image
+              src='/logo.png'
+              alt='FSADP Logo'
+              width={40}
+              height={40}
+              className='w-10 h-10'
+            />
+            <span className='text-white font-bold text-xl'>FSADP</span>
+          </div>
+        </Link>
+
         <div className='hidden md:flex items-center gap-6'>
           <a
             href='#'
