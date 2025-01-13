@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { MobileNav } from './MobileNav';
 import Link from 'next/link';
 import { RainbowButton } from './ui/rainbow-button';
+import { ASSET_PREFIX } from '@/lib/constants';
 
 export function Header() {
   return (
@@ -12,7 +13,7 @@ export function Header() {
         <Link href='/'>
           <div className='flex items-center gap-2'>
             <Image
-              src='/logo.png'
+              src={`${ASSET_PREFIX}logo.png`}
               alt='FSADP Logo'
               width={40}
               height={40}

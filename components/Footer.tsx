@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
+import { ASSET_PREFIX } from '@/lib/constants';
 
 export function Footer() {
   return (
@@ -11,7 +12,7 @@ export function Footer() {
             <Link href='/'>
               <div className='flex items-center gap-2'>
                 <Image
-                  src='/logo.png'
+                  src={`${ASSET_PREFIX}logo.png`}
                   alt='FSADP Logo'
                   width={40}
                   height={40}

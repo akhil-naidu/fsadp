@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 import { NeonGradientCard } from './ui/neon-gradient-card';
+import { ASSET_PREFIX } from '@/lib/constants';
 
 export function TestimonialCard() {
   return (
@@ -10,7 +11,7 @@ export function TestimonialCard() {
       <div className='rounded-xl text-card-foreground flex-1 p-6 bg-gradient-to-br from-gray-800 to-purple-900 text-white border border-purple-600/20 lg:flex lg:flex-col lg:justify-center lg:h-full shadow-xl'>
         <div className='flex items-start gap-4 mb-4'>
           <Image
-            src='/rahul-varma.jpg'
+            src={`${ASSET_PREFIX}rahul-varma.jpg`}
             alt='Student'
             width={60}
             height={60}
