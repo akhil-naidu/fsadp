@@ -48,7 +48,7 @@ export function MobileNav() {
           <div className='container mx-auto px-4 flex flex-col gap-2'>
             <a
               href='#'
-              className='text-purple-600 hover:text-orange-500 transition-colors py-2'
+              className='text-gray-300 hover:text-orange-500 transition-colors py-2'
             >
               Fullstack Roadmap
             </a>

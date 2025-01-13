@@ -26,7 +26,7 @@ export function Header() {
         <div className='hidden md:flex items-center gap-6'>
           <Link
             href='#'
-            className='text-purple-600 hover:text-orange-500 transition-colors'
+            className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Fullstack Roadmap
           </Link>
