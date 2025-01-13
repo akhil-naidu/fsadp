@@ -71,7 +71,8 @@ const config: Config = {
   		animation: {
   			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			gradient: 'gradient 8s linear infinite'
+  			gradient: 'gradient 8s linear infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		},
   		keyframes: {
   			'background-position-spin': {
@@ -93,6 +94,17 @@ const config: Config = {
   			gradient: {
   				to: {
   					backgroundPosition: 'var(--bg-size) 0'
+  				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
   				}
   			}
   		}
