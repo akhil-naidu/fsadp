@@ -3,10 +3,11 @@
 import Image from 'next/image';
 import { MobileNav } from './MobileNav';
 import Link from 'next/link';
+import { RainbowButton } from './ui/rainbow-button';
 
 export function Header() {
   return (
-    <nav className='sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-purple-600/20'>
+    <nav className='sticky top-0 z-50 backdrop-blur-sm border-b border-purple-600/20'>
       <div className='container mx-auto px-4 py-4 flex items-center justify-between'>
         <Link href='/'>
           <div className='flex items-center gap-2'>
@@ -40,6 +41,8 @@ export function Header() {
           >
             Live Classes
           </a>
+
+          <RainbowButton className=''>Join the Community</RainbowButton>
         </div>
         <MobileNav />
       </div>
