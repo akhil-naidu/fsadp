@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { RainbowButton } from './ui/rainbow-button';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +64,10 @@ export function MobileNav() {
             >
               Live Classes
             </a>
+
+            <RainbowButton className='max-w-fit'>
+              Join the Community
+            </RainbowButton>
           </div>
         </div>
       )}
