@@ -26,19 +26,19 @@ export function Header() {
             href='#'
             className='text-purple-600 hover:text-orange-500 transition-colors'
           >
-            New Platform
+            Fullstack Roadmap
           </a>
           <a
             href='#'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
-            MERN Stack Course
+            Bootcamps
           </a>
           <a
             href='#'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
-            Placement Program
+            Live Classes
           </a>
         </div>
         <MobileNav />
