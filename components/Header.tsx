@@ -24,24 +24,24 @@ export function Header() {
         </Link>
 
         <div className='hidden md:flex items-center gap-6'>
-          <a
+          <Link
             href='#'
             className='text-purple-600 hover:text-orange-500 transition-colors'
           >
             Fullstack Roadmap
-          </a>
-          <a
-            href='#'
+          </Link>
+          <Link
+            href='/bootcamps'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Bootcamps
-          </a>
-          <a
+          </Link>
+          <Link
             href='#'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Live Classes
-          </a>
+          </Link>
 
           <RainbowButton className=''>Join the Community</RainbowButton>
         </div>
