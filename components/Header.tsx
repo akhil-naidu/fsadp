@@ -24,27 +24,27 @@ export function Header() {
         </Link>
 
         <div className='hidden md:flex items-center gap-6'>
-          <Link
+          {/* <Link
             href='#'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Fullstack Roadmap
-          </Link>
+          </Link> */}
           <Link
             href='/bootcamps'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Bootcamps
           </Link>
-          <Link
+          {/* <Link
             href='#'
             className='text-gray-300 hover:text-orange-500 transition-colors'
           >
             Live Classes
-          </Link>
+          </Link> */}
 
           <Link href='https://learn.fsadp.com/register'>
-            <RainbowButton>Join For Free</RainbowButton>
+            <RainbowButton>Join The Community</RainbowButton>
           </Link>
         </div>
         <MobileNav />

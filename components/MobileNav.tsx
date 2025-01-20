@@ -46,24 +46,24 @@ export function MobileNav() {
       {isOpen && (
         <div className='absolute top-full left-0 right-0 bg-gray-900 border-b border-purple-600/20 py-2'>
           <div className='container mx-auto px-4 flex flex-col gap-2'>
-            <a
+            {/* <a
               href='#'
               className='text-gray-300 hover:text-orange-500 transition-colors py-2'
             >
               Fullstack Roadmap
-            </a>
+            </a> */}
             <a
               href='#'
               className='text-gray-300 hover:text-orange-500 transition-colors py-2'
             >
               Bootcamps
             </a>
-            <a
+            {/* <a
               href='#'
               className='text-gray-300 hover:text-orange-500 transition-colors py-2'
             >
               Live Classes
-            </a>
+            </a> */}
 
             <RainbowButton className='max-w-fit'>
               Join the Community

@@ -13,7 +13,7 @@ const UpcomingCourses = () => {
       </h1>
       <div className='flex gap-8 flex-wrap'>
         <CardContainer className='inter-var py-2 w-96'>
-          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-purple-600/90 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-orange-600/60 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
             <CardItem
               translateZ='50'
               className='text-xl font-bold text-neutral-600 dark:text-white'
@@ -25,14 +25,15 @@ const UpcomingCourses = () => {
               translateZ='60'
               className='text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300'
             >
-              Hover over this card to unleash the power of CSS perspective
+              Learn the fundamentals of web development with no prior knowledge
+              on coding/programming
             </CardItem>
             <CardItem translateZ='100' className='w-full mt-4'>
               <Image
-                src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='https://media.licdn.com/dms/image/v2/D5612AQFUoLFb-paGEQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1711350739136?e=2147483647&v=beta&t=sBRHkg6ymBKfzIjwRuqSTgZJxzJz-x-sSHMc5BH6oHg'
                 height='1000'
                 width='1000'
-                className='h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl'
+                className='h-full w-full object-cover rounded-xl group-hover/card:shadow-xl'
                 alt='thumbnail'
               />
             </CardItem>
@@ -55,7 +56,7 @@ const UpcomingCourses = () => {
         </CardContainer>
 
         <CardContainer className='inter-var py-2 w-96'>
-          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-orange-600/90 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-yellow-600/60 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
             <CardItem
               translateZ='50'
               className='text-xl font-bold text-neutral-600 dark:text-white'
@@ -67,14 +68,15 @@ const UpcomingCourses = () => {
               translateZ='60'
               className='text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300'
             >
-              Hover over this card to unleash the power of CSS perspective
+              Knowing JavaScript can help creating projects for mobile, desktop,
+              web, frontend, backend and AI.
             </CardItem>
             <CardItem translateZ='100' className='w-full mt-4'>
               <Image
-                src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='https://img-c.udemycdn.com/course/750x422/3442840_3033.jpg'
                 height='1000'
                 width='1000'
-                className='h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl'
+                className='h-full w-full object-cover rounded-xl group-hover/card:shadow-xl'
                 alt='thumbnail'
               />
             </CardItem>
@@ -97,7 +99,7 @@ const UpcomingCourses = () => {
         </CardContainer>
 
         <CardContainer className='inter-var py-2 w-96'>
-          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-pink-600/60 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
+          <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-blue-600/60 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  '>
             <CardItem
               translateZ='50'
               className='text-xl font-bold text-neutral-600 dark:text-white'
@@ -109,14 +111,15 @@ const UpcomingCourses = () => {
               translateZ='60'
               className='text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300'
             >
-              Hover over this card to unleash the power of CSS perspective
+              The most beloved and powerful library of the decade, and when
+              paired with Next.js, its possibilities are endless.
             </CardItem>
             <CardItem translateZ='100' className='w-full mt-4'>
               <Image
-                src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='https://media.licdn.com/dms/image/C4E12AQEBVCR2SpRr9g/article-cover_image-shrink_720_1280/0/1625909824541?e=2147483647&v=beta&t=Y_zSoI8cPUR3wQvPyYK15PLWpQJJ0si6OvsuXFnIC18'
                 height='1000'
                 width='1000'
-                className='h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl'
+                className='h-full w-full object-cover rounded-xl group-hover/card:shadow-xl'
                 alt='thumbnail'
               />
             </CardItem>
