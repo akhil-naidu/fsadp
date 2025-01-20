@@ -12,6 +12,18 @@ const nextConfig = {
         port: '',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: '**.img-c.udemycdn.com',
+        port: '',
+        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.media.licdn.com',
+        port: '',
+        search: '',
+      },
     ],
   },
 };
