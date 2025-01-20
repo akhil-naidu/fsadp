@@ -6,7 +6,7 @@ import AnimatedGradientText from '@/components/ui/animated-gradient-text';
 
 const BootcampHero = () => {
   return (
-    <div className='z-10 flex flex-col gap-8 min-h-64 items-center justify-center mt-40'>
+    <div className='z-10 flex flex-col gap-8 min-h-64 items-center justify-center mt-24'>
       <AnimatedGradientText>
         🎉 <hr className='mx-2 h-4 w-px shrink-0 bg-gray-300' />{' '}
         <span

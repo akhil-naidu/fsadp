@@ -43,7 +43,9 @@ export function Header() {
             Live Classes
           </Link>
 
-          <RainbowButton className=''>Join the Community</RainbowButton>
+          <Link href='https://learn.fsadp.com/register'>
+            <RainbowButton>Join For Free</RainbowButton>
+          </Link>
         </div>
         <MobileNav />
       </div>
