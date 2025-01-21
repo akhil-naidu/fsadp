@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @keyframes gradient-x {
-  0%, 100% {
+  0%,
+  100% {
     background-size: 200% 200%;
     background-position: left center;
   }
@@ -25,6 +26,27 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+
+    --background: 270.7 100% 95%;
+    --foreground: 270.7 5% 6%;
+    --card: 270.7 50% 90%;
+    --card-foreground: 270.7 5% 10%;
+    --popover: 270.7 100% 95%;
+    --popover-foreground: 270.7 100% 6%;
+    --primary: 270.7 91% 65.1%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 270.7 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 232.7 30% 85%;
+    --muted-foreground: 270.7 5% 35%;
+    --accent: 232.7 30% 80%;
+    --accent-foreground: 270.7 5% 10%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 270.7 5% 90%;
+    --border: 270.7 30% 50%;
+    --input: 270.7 30% 18%;
+    --ring: 270.7 91% 65.1%;
+    --radius: 0.5rem;
   }
   .dark {
     --color-1: 0 100% 63%;
@@ -32,7 +54,96 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
-  }}
+
+    --background: 270.7 50% 6%;
+    --foreground: 270.7 5% 90%;
+    --card: 270.7 50% 6%;
+    --card-foreground: 270.7 5% 90%;
+    --popover: 270.7 50% 5%;
+    --popover-foreground: 270.7 5% 90%;
+    --primary: 270.7 91% 65.1%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 270.7 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 232.7 30% 15%;
+    --muted-foreground: 270.7 5% 60%;
+    --accent: 232.7 30% 15%;
+    --accent-foreground: 270.7 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 270.7 5% 90%;
+    --border: 270.7 30% 18%;
+    --input: 270.7 30% 18%;
+    --ring: 270.7 91% 65.1%;
+    --radius: 0.5rem;
+  }
+  .theme-orange {
+    --background: 17.5 50% 6%;
+    --foreground: 17.5 5% 90%;
+    --card: 17.5 50% 6%;
+    --card-foreground: 17.5 5% 90%;
+    --popover: 17.5 50% 5%;
+    --popover-foreground: 17.5 5% 90%;
+    --primary: 17.5 88.3% 40.4%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 17.5 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: -20.5 30% 15%;
+    --muted-foreground: 17.5 5% 60%;
+    --accent: -20.5 30% 15%;
+    --accent-foreground: 17.5 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 17.5 5% 90%;
+    --border: 17.5 30% 18%;
+    --input: 17.5 30% 18%;
+    --ring: 17.5 88.3% 40.4%;
+    --radius: 0.5rem;
+  }
+  .theme-yellow {
+    --background: 35.5 50% 6%;
+    --foreground: 35.5 5% 90%;
+    --card: 35.5 50% 6%;
+    --card-foreground: 35.5 5% 90%;
+    --popover: 35.5 50% 5%;
+    --popover-foreground: 35.5 5% 90%;
+    --primary: 35.5 91.7% 32.9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35.5 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: -2.5 30% 15%;
+    --muted-foreground: 35.5 5% 60%;
+    --accent: -2.5 30% 15%;
+    --accent-foreground: 35.5 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 35.5 5% 90%;
+    --border: 35.5 30% 18%;
+    --input: 35.5 30% 18%;
+    --ring: 35.5 91.7% 32.9%;
+    --radius: 0.5rem;
+  }
+
+  .theme-blue {
+    --background: 225.9 50% 6%;
+    --foreground: 225.9 5% 90%;
+    --card: 225.9 50% 6%;
+    --card-foreground: 225.9 5% 90%;
+    --popover: 225.9 50% 5%;
+    --popover-foreground: 225.9 5% 90%;
+    --primary: 225.9 70.7% 40.2%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 225.9 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 187.9 30% 15%;
+    --muted-foreground: 225.9 5% 60%;
+    --accent: 187.9 30% 15%;
+    --accent-foreground: 225.9 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 225.9 5% 90%;
+    --border: 225.9 30% 18%;
+    --input: 225.9 30% 18%;
+    --ring: 225.9 70.7% 40.2%;
+    --radius: 0.5rem;
+  }
+}
 
 @layer base {
   * {
@@ -42,4 +153,3 @@
     @apply bg-background text-foreground;
   }
 }
-
