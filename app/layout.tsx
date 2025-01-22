@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackgroundBeams } from '@/components/ui/background-beams';
+import { Toaster } from '@/components/ui/toaster';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <BackgroundBeams />
+        <Toaster />
       </body>
     </html>
   );

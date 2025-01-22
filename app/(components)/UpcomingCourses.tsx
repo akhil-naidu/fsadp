@@ -5,6 +5,7 @@ import React from 'react';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import Link from 'next/link';
 import { Dialog, DialogTrigger } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -21,26 +22,82 @@ const UpcomingCourses = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [course, setCourse] = useState('');
+  const [courseId, setCourseId] = useState('');
   const [currentTheme, setCurrentTheme] = useState('');
   const [courses, setCourses] = useState([]);
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
-    },
+  const { toast } = useToast();
+
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
+  //   },
+  // };
+
+  const incrementWaitlistById = (courseArray: any, courseId: any): [] => {
+    return courseArray.map((item: any) => {
+      if (item.Id === courseId) {
+        return { ...item, waitlists: item.waitlists + 1 };
+      }
+      return item;
+    });
+  };
+
+  const getCourseNameById = (courseArray: any, courseId: any) => {
+    const courseDetail = courseArray.find(
+      (course: any) => course.Id === courseId,
+    );
+    return courseDetail.name;
+  };
+
+  const addToWaitlist = async () => {
+    const response = await fetch(
+      'https://app.nocodb.com/api/v2/tables/m42aqn6tv0omq80/records',
+      {
+        method: 'POST',
+        headers: {
+          'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email }),
+      },
+    );
+
+    const { Id: wishlistId } = await response.json();
+
+    await fetch(
+      `https://app.nocodb.com/api/v2/tables/m42aqn6tv0omq80/links/c0dv16pmixti3v0/records/${wishlistId}`,
+      {
+        method: 'POST',
+        headers: {
+          'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ Id: courseId }),
+      },
+    );
+
+    const newCourses = incrementWaitlistById(courses, courseId);
+    setCourses([...newCourses]);
+
+    const courseName = getCourseNameById(courses, courseId);
+
+    toast({
+      title: 'Enrolled Successfully',
+      description: `Congratulations, ${name}! You have successfully enrolled in the ${courseName} course.`,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted:', { name, email, course });
+    addToWaitlist();
     // Here you would typically send the data to your server
     setIsOpen(false);
     // Reset form fields
     setName('');
     setEmail('');
-    setCourse('');
+    setCourseId('');
     setCurrentTheme('');
   };
 
@@ -48,7 +105,12 @@ const UpcomingCourses = () => {
     const getCourses = async () => {
       const response = await fetch(
         'https://app.nocodb.com/api/v2/tables/mky9sjltxsqgm5z/records?offset=0&limit=25&where=&viewId=vwkvl0v76zqquko8',
-        options,
+        {
+          method: 'GET',
+          headers: {
+            'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
+          },
+        },
       );
 
       const data = await response.json();
@@ -107,7 +169,7 @@ const UpcomingCourses = () => {
                       asChild
                       onClick={() => {
                         setCurrentTheme(`theme-${color}`);
-                        setCourse('HTML and CSS');
+                        setCourseId(Id);
                       }}
                     >
                       <CardItem
