@@ -119,19 +119,9 @@ const UpcomingCourses = () => {
           },
         },
       );
-      const responseTest = await fetch(
-        'https://app.nocodb.com/api/v2/tables/m42aqn6tv0omq80/records?offset=0&limit=25&where=&viewId=vwwl22464xwpgfdg',
-        {
-          method: 'GET',
-          headers: {
-            'xc-token': 'htpvelYjigi2_-z5URhWOvWGB-swfTRmjMU3hQnY',
-          },
-        },
-      );
 
       const data = await response.json();
-      const dataTest = await responseTest.json();
-      console.log(dataTest);
+
       setCourses(data.list);
 
       return data;
