@@ -29,7 +29,6 @@ const UpcomingCourses = () => {
   const [currentTheme, setCurrentTheme] = useState('');
   const [courses, setCourses] = useState([]);
   const dummyArray = new Array(3).fill(0);
-  const phoneNumberInputRef = useRef(null);
 
   const { toast } = useToast();
 
@@ -134,61 +133,61 @@ const UpcomingCourses = () => {
   }, []);
 
   return (
-    <div className="pb-20">
-      <h1 className="text-4xl md:text-3xl font-bold text-white font-outfit pb-4">
+    <div className='pb-20'>
+      <h1 className='text-4xl md:text-3xl font-bold text-white font-outfit pb-4'>
         Upcoming Courses
       </h1>
 
       {courses.length === 0 ? (
-        <div className="flex gap-8 flex-wrap justify-center pt-8 ">
+        <div className='flex gap-8 flex-wrap justify-center pt-8 '>
           {dummyArray.map((val, index) => {
             return (
-              <div className="flex flex-col space-y-3 lg:w-96" key={index}>
-                <Skeleton className="h-[300px]  rounded-xl" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 " />
-                  <Skeleton className="h-4 " />
+              <div className='flex flex-col space-y-3 lg:w-96' key={index}>
+                <Skeleton className='h-[300px]  rounded-xl' />
+                <div className='space-y-2'>
+                  <Skeleton className='h-4 ' />
+                  <Skeleton className='h-4 ' />
                 </div>
               </div>
             );
           })}
         </div>
       ) : (
-        <div className="flex gap-8 flex-wrap justify-center transition ease-in delay-10000">
+        <div className='flex gap-8 flex-wrap justify-center transition ease-in delay-10000'>
           <Dialog open={isOpen} onOpenChange={setIsOpen}>
             {courses.map(
               ({ Id, name, description, image, waitlists, color }) => {
                 return (
-                  <CardContainer className="inter-var py-2 w-96" key={Id}>
+                  <CardContainer className='inter-var py-2 w-96' key={Id}>
                     <CardBody
                       className={`bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-${color}-600/60 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  `}
                     >
                       <CardItem
-                        translateZ="50"
-                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                        translateZ='50'
+                        className='text-xl font-bold text-neutral-600 dark:text-white'
                       >
                         {name}
                       </CardItem>
                       <CardItem
-                        as="p"
-                        translateZ="60"
-                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                        as='p'
+                        translateZ='60'
+                        className='text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300'
                       >
                         {description}
                       </CardItem>
-                      <CardItem translateZ="100" className="w-full mt-4">
+                      <CardItem translateZ='100' className='w-full mt-4'>
                         <Image
                           src={image}
-                          height="1000"
-                          width="1000"
-                          className="h-full w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                          alt="thumbnail"
+                          height='1000'
+                          width='1000'
+                          className='h-full w-full object-cover rounded-xl group-hover/card:shadow-xl'
+                          alt='thumbnail'
                         />
                       </CardItem>
-                      <div className="flex justify-between items-center mt-4">
+                      <div className='flex justify-between items-center mt-4'>
                         <CardItem
                           translateZ={20}
-                          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                          className='px-4 py-2 rounded-xl text-xs font-normal dark:text-white'
                         >
                           {waitlists} enrolled
                         </CardItem>
@@ -201,8 +200,8 @@ const UpcomingCourses = () => {
                         >
                           <CardItem
                             translateZ={20}
-                            as="button"
-                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                            as='button'
+                            className='px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold'
                           >
                             Join Waitlist
                           </CardItem>
@@ -374,30 +373,30 @@ const UpcomingCourses = () => {
                   Please provide your name and email address.
                 </DialogDescription>
               </DialogHeader>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+              <form onSubmit={handleSubmit} className='space-y-4'>
+                <div className='space-y-2'>
+                  <Label htmlFor='name'>Name</Label>
                   <Input
-                    id="name"
+                    id='name'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Enter your name"
+                    placeholder='Enter your name'
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                <div className='space-y-2'>
+                  <Label htmlFor='email'>Email</Label>
                   <Input
-                    id="email"
-                    type="email"
+                    id='email'
+                    type='email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
+                    placeholder='Enter your email'
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Mobile</Label>
+                <div className='space-y-2'>
+                  <Label htmlFor='email'>Mobile</Label>
                   {/* <Input
                     id='mobile'
                     type='number'
@@ -408,15 +407,15 @@ const UpcomingCourses = () => {
                   /> */}
                   <PhoneInput onChange={(val) => setMobile(val)} />
                 </div>
-                <div className="flex justify-end space-x-2">
+                <div className='flex justify-end space-x-2'>
                   <Button
-                    type="button"
-                    variant="outline"
+                    type='button'
+                    variant='outline'
                     onClick={() => setIsOpen(false)}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit">Submit</Button>
+                  <Button type='submit'>Submit</Button>
                 </div>
               </form>
             </DialogContent>

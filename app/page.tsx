@@ -1,6 +1,7 @@
 import { Hero } from '@/components/Hero';
 import { TestimonialCard } from '@/components/TestimonialCard';
 import UpcomingCourses from './(components)/UpcomingCourses';
+import FeaturesSection from './(components)/FeatureSection';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </div>
 
       <UpcomingCourses />
+      <FeaturesSection />
     </div>
   );
 }

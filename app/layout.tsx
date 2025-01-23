@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={outfit.className}>
         <div className='flex flex-col min-h-screen bg-gray-900'>
           <Header />
-          <main className='flex-grow flex'>
+          <main className='flex-grow flex container'>
             <div className='container mx-auto px-4 flex items-center justify-center'>
               {children}
             </div>
