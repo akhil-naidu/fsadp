@@ -9,6 +9,7 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from '@tabler/icons-react';
+import { FlickeringGrid } from '@/components/ui/flickering-grid';
 
 const FeaturesSectionWithHoverEffects = () => {
   const features = [
@@ -63,10 +64,22 @@ const FeaturesSectionWithHoverEffects = () => {
       <h1 className='text-4xl md:text-3xl font-bold text-white font-outfit pb-4'>
         Features
       </h1>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto'>
-        {features.map((feature, index) => (
-          <Feature key={feature.title} {...feature} index={index} />
-        ))}
+
+      <div className='relative h-[500px] rounded-lg w-full overflow-hidden border'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto'>
+          {features.map((feature, index) => (
+            <Feature key={feature.title} {...feature} index={index} />
+          ))}
+        </div>
+        <FlickeringGrid
+          className='z-0 absolute inset-0 size-full'
+          squareSize={4}
+          gridGap={6}
+          color='#6B7280'
+          maxOpacity={0.2}
+          flickerChance={0.1}
+          height={800}
+        />
       </div>
     </div>
   );
@@ -86,9 +99,15 @@ const Feature = ({
   return (
     <div
       className={cn(
-        'flex flex-col lg:border-r  py-10 relative group/feature dark:border-gray-800',
-        (index === 0 || index === 4) && 'lg:border-l dark:border-gray-800',
-        index < 4 && 'lg:border-b dark:border-gray-800',
+        'flex flex-col   py-10 relative group/feature ',
+        (index === 1 ||
+          index === 2 ||
+          index === 3 ||
+          index === 5 ||
+          index === 6 ||
+          index === 7) &&
+          'lg:border-l dark:border-gray-800',
+        index < 4 && 'lg:border-b dark:border-b-gray-800',
       )}
     >
       {index < 4 && (
@@ -101,7 +120,7 @@ const Feature = ({
         {icon}
       </div>
       <div className='text-lg font-bold mb-2 relative z-10 px-10'>
-        <div className='absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-gray-300 dark:bg-gray-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center' />
+        <div className='absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-gray-300 dark:bg-gray-700 group-hover/feature:bg-orange-500 transition-all duration-200 origin-center' />
         <span className='group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800 dark:text-gray-100'>
           {title}
         </span>
