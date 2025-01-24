@@ -37,26 +37,27 @@ const FeaturesSectionWithHoverEffects = () => {
       icon: <IconCloud />,
     },
     {
-      title: 'Multi-tenant Architecture',
-      description: 'You can simply share passwords instead of buying new seats',
+      title: 'Collaborative Sessions',
+      description:
+        'Work together on complex problems in pair programming sessions',
       icon: <IconRouteAltLeft />,
     },
     {
-      title: '24/7 Customer Support',
-      description:
-        'We are available a 100% of the time. Atleast our AI Agents are.',
-      icon: <IconHelp />,
-    },
-    {
-      title: 'Money back guarantee',
-      description:
-        'If you donot like EveryAI, we will convince you to like us.',
+      title: 'Code Reviews',
+      description: `Regular code reviews to ensure you're writing production-quality code`,
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: 'And everything else',
-      description: 'I just ran out of copy ideas. Accept my sincere apologies',
+      title: 'Direct Expert Access',
+      description:
+        'Get personalized guidance from experienced industry professionals',
       icon: <IconHeart />,
+    },
+    {
+      title: 'Multi Language',
+      description:
+        'Be it C, C++, java, Python, React, NextJS, VueJS, etc, you have it all',
+      icon: <IconHelp />,
     },
   ];
   return (
