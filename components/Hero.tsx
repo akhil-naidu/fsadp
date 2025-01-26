@@ -33,13 +33,15 @@ export function Hero() {
           </Link>
         </Button>
 
-        {/* <Button
-          size='lg'
-          variant='secondary'
-          className='bg-orange-500 hover:bg-orange-500/90 text-white px-8 py-6 text-lg rounded-xl border-2 border-orange-500'
-        >
-          View Curriculum →
-        </Button> */}
+        <Link href="/curriculum">
+          <Button
+            size="lg"
+            variant="secondary"
+            className="bg-orange-500 hover:bg-orange-500/90 text-white px-8 py-6 text-lg rounded-xl border-2 border-orange-500"
+          >
+            View Curriculum →
+          </Button>
+        </Link>
       </div>
       {/* <AnimatedGridPattern
         numSquares={30}
