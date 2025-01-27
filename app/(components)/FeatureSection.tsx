@@ -79,7 +79,7 @@ const FeaturesSectionWithHoverEffects = () => {
           color="#6B7280"
           maxOpacity={0.4}
           flickerChance={0.1}
-          height={800}
+          // height={800}
         />
       </div>
     </div>
