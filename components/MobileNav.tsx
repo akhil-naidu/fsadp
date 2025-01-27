@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { RainbowButton } from './ui/rainbow-button';
+import Link from 'next/link';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,12 +53,18 @@ export function MobileNav() {
             >
               Fullstack Roadmap
             </a> */}
-            <a
-              href='#'
+            <Link
+              href='/curriculum'
+              className='text-gray-300 hover:text-orange-500 transition-colors py-2'
+            >
+              Curriculum
+            </Link>
+            <Link
+              href='/bootcamps'
               className='text-gray-300 hover:text-orange-500 transition-colors py-2'
             >
               Bootcamps
-            </a>
+            </Link>
             {/* <a
               href='#'
               className='text-gray-300 hover:text-orange-500 transition-colors py-2'
@@ -65,9 +72,11 @@ export function MobileNav() {
               Live Classes
             </a> */}
 
-            <RainbowButton className='max-w-fit'>
-              Join the Community
-            </RainbowButton>
+            <Link href='https://learn.fsadp.com/community'>
+              <RainbowButton className='max-w-fit'>
+                Join The Community
+              </RainbowButton>
+            </Link>
           </div>
         </div>
       )}
