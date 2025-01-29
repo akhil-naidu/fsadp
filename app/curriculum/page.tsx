@@ -9,17 +9,17 @@ const page = () => {
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
             Week 01
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
             Foundational Concepts
           </h3>
-          <ul>
-            <li className="pt-2 text-base font-normal text-gray-500 dark:text-gray-400">
+          <ul className="flex flex-col gap-1">
+            <li className=" text-gray-500 dark:text-gray-400">
               Introduction to HTML & CSS
             </li>
-            <li className="pt-2 text-base font-normal text-gray-500 dark:text-gray-400">
+            <li className="font-normal text-gray-500 dark:text-gray-400">
               What is HTML? What is CSS?
             </li>
-            <li className="pt-2 text-base font-normal text-gray-500 dark:text-gray-400">
+            <li className=" font-normal text-gray-500 dark:text-gray-400">
               Basic HTML structure CSS Basics (Inline, Internal, External CSS)
             </li>
           </ul>

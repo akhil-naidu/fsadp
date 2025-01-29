@@ -13,20 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='dark'>
+    <html lang="en" className="dark">
       <head>
         <script
-          type='text/javascript'
-          src='https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js'
-          id='aisensy-wa-widget'
-          widget-id='OumhOZ'
+          type="text/javascript"
+          src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+          id="aisensy-wa-widget"
+          widget-id="OumhOZ"
         ></script>
       </head>
-      <body className={outfit.className}>
-        <div className='flex flex-col min-h-screen bg-gray-900'>
+      <body className={`${outfit.className} w-screen`}>
+        <div className="flex flex-col min-h-screen bg-gray-900">
           <Header />
-          <main className='flex-grow flex container'>
-            <div className='container mx-auto px-4 flex items-center justify-center'>
+          <main className="flex-grow flex container">
+            <div className="container mx-auto px-4 flex items-center justify-center">
               {children}
             </div>
           </main>

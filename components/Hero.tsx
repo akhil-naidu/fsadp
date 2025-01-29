@@ -23,15 +23,15 @@ export function Hero() {
         program. Learn by building real-world applications.
       </p>
       <div className="relative flex flex-col sm:flex-row gap-4 z-10">
-        <Button
-          size="lg"
-          className="bg-purple-600 hover:bg-purple-600/90 text-white px-8 py-6 text-lg rounded-xl"
-          // asChild
-        >
-          <Link href="https://learn.fsadp.com" passHref target="_blank">
+        <Link href="https://learn.fsadp.com" passHref target="_blank">
+          <Button
+            size="lg"
+            className="bg-purple-600 hover:bg-purple-600/90 text-white px-8 py-6 text-lg rounded-xl"
+            // asChild
+          >
             Start Learning →
-          </Link>
-        </Button>
+          </Button>
+        </Link>
 
         <Link href="/curriculum">
           <Button
