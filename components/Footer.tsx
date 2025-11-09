@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Star } from "lucide-react"
-import Link from "next/link"
-import { ASSET_PREFIX } from "@/lib/constants"
+import Image from 'next/image';
+import { Star } from 'lucide-react';
+import Link from 'next/link';
+import { ASSET_PREFIX } from '@/lib/constants';
 
 export function Footer() {
   return (
@@ -77,15 +77,15 @@ export function Footer() {
               </a>
             </div>
             <div className="flex items-center space-x-2">
-              {/* <div className='flex -space-x-1'>
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className='w-5 h-5 fill-purple-600 text-purple-600'
-                  />
-                ))}
-              </div>
-              <div className='text-white'>
+              {/* <div className=""> */}
+              <Link href="/terms-conditions" className="flex -space-x-1 pr-4">
+                Terms of Service
+              </Link>
+              <Link href="/privacy-policy" className="flex -space-x-1 pr-4">
+                Privacy Policy
+              </Link>
+              {/* </div> */}
+              {/* <div className='text-white'>
                 <span className='font-bold'>4.9</span>
                 <span className='text-gray-400 text-sm ml-1'>
                   (2,000+ reviews)
@@ -97,5 +97,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
